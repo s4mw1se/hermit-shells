@@ -1,0 +1,17 @@
+[project]
+name = "hermit-shells"
+version = "0.1.0"
+description = "Cloud Resource Takeover Scanner"
+license = "MIT"
+requires-python = ">=3.11"
+dependencies = [
+    "typer[all]",
+    "PyYAML",
+    "simple-sarif",
+]
+  
+[project.scripts]
+scanner = "hermit_shells.cli:app"
+
+[tool.black]
+line-length = 88

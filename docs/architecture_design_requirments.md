@@ -32,7 +32,7 @@ This design follows **separation of concerns**, making the tool **easier to test
 
 ### 3. Project Structure (src layout)
 ```plaintext
-cloud-takeover-scanner/
+hermit-shells/
 ├── src/cloud_takeover_scanner/
 │   ├── __init__.py
 │   ├── cli.py           # CLI entry point

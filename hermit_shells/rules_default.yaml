@@ -1,0 +1,168 @@
+############################
+# AWS
+############################
+- id: "AWS.S3.Takeover"
+  pattern: '([A-Za-z0-9\\-_.]+)\\.s3\\.amazonaws\\.com'
+  description: "Potential AWS S3 bucket takeover point"
+  cloud_provider: "AWS"
+  severity: "HIGH"
+
+- id: "AWS.S3Website.Takeover"
+  pattern: '([A-Za-z0-9\\-_.]+)\\.s3-website[.-][A-Za-z0-9\\-]+\\.amazonaws\\.com'
+  description: "Potential AWS S3 static-website endpoint takeover point"
+  cloud_provider: "AWS"
+  severity: "HIGH"
+
+- id: "AWS.ElasticBeanstalk.Takeover"
+  pattern: '([A-Za-z0-9\\-]+)\\.[A-Za-z0-9\\-]+\\.elasticbeanstalk\\.com'
+  description: "Potential AWS Elastic Beanstalk environment takeover point"
+  cloud_provider: "AWS"
+  severity: "HIGH"
+
+############################
+# Microsoft Azure
+############################
+- id: "Azure.Blob.Takeover"
+  pattern: '([A-Za-z0-9\\-]+)\\.blob\\.core\\.windows\\.net'
+  description: "Potential Azure Blob Storage account takeover point"
+  cloud_provider: "Azure"
+  severity: "HIGH"
+
+- id: "Azure.WebApp.Takeover"
+  pattern: '([A-Za-z0-9\\-]+)\\.azurewebsites\\.net'
+  description: "Potential Azure App Service (Web App) takeover point"
+  cloud_provider: "Azure"
+  severity: "HIGH"
+
+- id: "Azure.CDN.Takeover"
+  pattern: '([A-Za-z0-9\\-]+)\\.azureedge\\.net'
+  description: "Potential Azure CDN endpoint takeover point"
+  cloud_provider: "Azure"
+  severity: "HIGH"
+
+- id: "Azure.FrontDoor.Takeover"
+  pattern: '([A-Za-z0-9\\-]+)\\.azurefd\\.net'
+  description: "Potential Azure Front Door default domain takeover point"
+  cloud_provider: "Azure"
+  severity: "HIGH"
+
+- id: "Azure.CloudService.Takeover1"
+  pattern: '([A-Za-z0-9\\-]+)\\.cloudapp\\.net'
+  description: "Potential Azure Cloud Service / VM takeover point (.cloudapp.net)"
+  cloud_provider: "Azure"
+  severity: "HIGH"
+
+- id: "Azure.CloudService.Takeover2"
+  pattern: '([A-Za-z0-9\\-]+)\\.cloudapp\\.azure\\.com'
+  description: "Potential Azure Cloud Service / VM takeover point (.cloudapp.azure.com)"
+  cloud_provider: "Azure"
+  severity: "HIGH"
+
+- id: "Azure.API.Takeover"
+  pattern: '([A-Za-z0-9\\-]+)\\.azure-api\\.net'
+  description: "Potential Azure API Management endpoint takeover point"
+  cloud_provider: "Azure"
+  severity: "HIGH"
+
+- id: "Azure.ContainerInstance.Takeover"
+  pattern: '([A-Za-z0-9\\-]+)\\.azurecontainer\\.io'
+  description: "Potential Azure Container Instance public DNS takeover point"
+  cloud_provider: "Azure"
+  severity: "HIGH"
+
+- id: "Azure.ContainerRegistry.Takeover"
+  pattern: '([A-Za-z0-9\\-]+)\\.azurecr\\.io'
+  description: "Potential Azure Container Registry takeover point"
+  cloud_provider: "Azure"
+  severity: "HIGH"
+
+- id: "Azure.HDInsight.Takeover"
+  pattern: '([A-Za-z0-9\\-]+)\\.azurehdinsight\\.net'
+  description: "Potential Azure HDInsight cluster takeover point"
+  cloud_provider: "Azure"
+  severity: "HIGH"
+
+- id: "Azure.SQLDatabase.Takeover"
+  pattern: '([A-Za-z0-9\\-]+)\\.database\\.windows\\.net'
+  description: "Potential Azure SQL Database server takeover point"
+  cloud_provider: "Azure"
+  severity: "HIGH"
+
+- id: "Azure.Redis.Takeover"
+  pattern: '([A-Za-z0-9\\-]+)\\.redis\\.cache\\.windows\\.net'
+  description: "Potential Azure Redis Cache endpoint takeover point"
+  cloud_provider: "Azure"
+  severity: "HIGH"
+
+- id: "Azure.Search.Takeover"
+  pattern: '([A-Za-z0-9\\-]+)\\.search\\.windows\\.net'
+  description: "Potential Azure Cognitive Search service takeover point"
+  cloud_provider: "Azure"
+  severity: "HIGH"
+
+- id: "Azure.ServiceBus.Takeover"
+  pattern: '([A-Za-z0-9\\-]+)\\.servicebus\\.windows\\.net'
+  description: "Potential Azure Service Bus namespace takeover point"
+  cloud_provider: "Azure"
+  severity: "HIGH"
+
+- id: "Azure.DevOps.Takeover"
+  pattern: '([A-Za-z0-9\\-]+)\\.visualstudio\\.com'
+  description: "Potential Azure DevOps organization takeover point"
+  cloud_provider: "Azure"
+  severity: "HIGH"
+
+############################
+# Google Cloud Platform
+############################
+
+- id: "GCP.Storage.Takeover2"
+  pattern: '([A-Za-z0-9\\-_.]+)\\.storage\\.googleapis\\.com'
+  description: "Potential GCP Cloud Storage bucket takeover point (virtual host)"
+  cloud_provider: "GCP"
+  severity: "MEDIUM"
+
+- id: "GCP.AppEngine.Takeover"
+  pattern: '([A-Za-z0-9\\-]+)\\.appspot\\.com'
+  description: "Potential Google App Engine application takeover point"
+  cloud_provider: "GCP"
+  severity: "HIGH"
+
+- id: "GCP.FirebaseHosting.Takeover1"
+  pattern: '([A-Za-z0-9\\-]+)\\.firebaseapp\\.com'
+  description: "Potential Firebase Hosting site takeover point (.firebaseapp.com)"
+  cloud_provider: "GCP"
+  severity: "HIGH"
+
+- id: "GCP.FirebaseHosting.Takeover2"
+  pattern: '([A-Za-z0-9\\-]+)\\.web\\.app'
+  description: "Potential Firebase Hosting site takeover point (.web.app)"
+  cloud_provider: "GCP"
+  severity: "HIGH"
+
+############################
+# Other Public Cloud Providers
+############################
+- id: "DigitalOcean.Spaces.Takeover"
+  pattern: '([A-Za-z0-9\\-_.]+)\\.[A-Za-z0-9\\-]+\\.digitaloceanspaces\\.com'
+  description: "Potential DigitalOcean Spaces bucket takeover point"
+  cloud_provider: "DigitalOcean"
+  severity: "HIGH"
+
+- id: "Alibaba.OSS.Takeover"
+  pattern: '([A-Za-z0-9\\-]+)\\.[A-Za-z0-9\\-]+\\.oss\\.aliyuncs\\.com'
+  description: "Potential Alibaba Cloud OSS bucket takeover point"
+  cloud_provider: "Alibaba Cloud"
+  severity: "HIGH"
+
+- id: "Oracle.ObjectStorage.Takeover"
+  pattern: 'objectstorage\\.[A-Za-z0-9\\-]+\\.(?:oraclecloud\\.com|oraclegovcloud\\.com)'
+  description: "Potential Oracle Cloud Object Storage bucket takeover point"
+  cloud_provider: "Oracle Cloud"
+  severity: "MEDIUM"
+
+- id: "IBM.COS.Takeover"
+  pattern: '([A-Za-z0-9\\-]+)\\.s3\\.[A-Za-z0-9\\-]+\\.cloud-object-storage\\.appdomain\\.cloud'
+  description: "Potential IBM Cloud Object Storage bucket takeover point"
+  cloud_provider: "IBM Cloud"
+  severity: "MEDIUM"
